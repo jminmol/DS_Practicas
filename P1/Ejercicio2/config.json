@@ -1,0 +1,7 @@
+{
+"texto": "The V8 engine is a legendary internal combustion engine configuration where eight cylinders are arranged in two banks of four, sharing a single crankshaft. Historically, these engines have been highly revered in the automotive industry and the racing world for their incredible smoothness, unmistakable deep rumbling sound, and their ability to generate massive amounts of horsepower and torque at low RPMs. For decades, the V8 was the beating heart of American muscle cars and high-end European sports cars. However, in recent years, the popularity of V8 engines has drastically declined due to increasingly strict environmental regulations and their high fuel consumption. Today, the majority of car manufacturers are replacing these massive blocks with much smaller, more efficient four or six-cylinder engines. These smaller engines are often paired with powerful turbochargers or hybrid electric systems, striving to find the perfect balance between high-performance driving and ecological responsibility. Despite this shift, the V8 remains a symbol of raw automotive power.",
+"model_llm": "facebook/bart-large-cnn",
+"model_translation": "Helsinki-NLP/opus-mt-en-es",
+"model_sentiment": "nlptown/bert-base-multilingual-uncased-sentiment",
+"huggingface_api_token": "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"
+}

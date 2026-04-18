@@ -1,0 +1,24 @@
+# Ignorar archivos compilados de Java
+*.class
+
+# Ignorar archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar archivos empaquetados
+*.jar
+*.war
+
+# Ignorar carpetas de configuración de VS Code
+.vscode/
+
+# Ignorar archivos temporales de Linux
+*~
+*.swp
+
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
