@@ -8,7 +8,11 @@ class Hotel implements ServicioTuristico {
   PoliticaHotel politica;
 
   // constructor del hotel
-  Hotel(this.nombre, this.precioNoche, this.noches, this.politica);
+  Hotel(this.nombre, this.precioNoche, this.noches, this.politica){
+    if (noches <= 0) {
+      throw ArgumentError('El número de noches debe ser mayor que cero.');
+    }
+  }
 
   // método para obtener el precio de un hotel según su política
   @override
