@@ -1,7 +1,5 @@
-// Importamos la librería de tests de Flutter
 import 'package:flutter_test/flutter_test.dart';
 
-// Importamos nuestras políticas
 import '../lib/clases/TarifaLowCost.dart';
 import '../lib/clases/TarifaBusiness.dart';
 import '../lib/clases/SoloAlojamiento.dart';
@@ -18,11 +16,11 @@ void main() {
   group('Grupo Políticas de Precio', () {
 
     test('TarifaLowCost añade su recargo de gestión constante al precio base', () {
-      // Preparación (Arrange)
+      // Preparación
       final tarifa = TarifaLowCost();
-      // Ejecución (Act)
+      // Ejecución
       final precioFinal = tarifa.calcular(100.0);
-      // Comprobación (Assert): 100 base + 60 recargo fijo = 160.0
+      // Comprobación: 100 base + 60 recargo fijo = 160.0
       expect(precioFinal, equals(160.0));
     });
 
