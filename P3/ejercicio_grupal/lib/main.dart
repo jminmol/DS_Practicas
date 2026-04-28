@@ -43,7 +43,7 @@ class PantallaReservas extends StatefulWidget {
 }
 
 class _PantallaReservasState extends State<PantallaReservas> {
-  // paquete principal (ahora es opcional al inicio para poder crearlo)
+  // paquete principal
   Paquete? paqueteRaiz;
 
   // controladores de texto
@@ -78,14 +78,14 @@ class _PantallaReservasState extends State<PantallaReservas> {
             onPressed: () {
               final precio = double.tryParse(_precioController.text) ?? 100.0;
               try {
-                // INTENTAMOS crear el vuelo (aquí actúa la regla de Vuelo.dart)
+                // Creamos el vuelo
                 final nuevoVuelo = Vuelo(tipo, precio, politica);
                 setState(() {
                   paqueteRaiz?.servicios.add(nuevoVuelo);
                 });
                 Navigator.pop(context); // Cerramos pop-up si todo va bien
               } catch (e) {
-                // ATRAPAMOS la explosión si el precio era negativo y avisamos al usuario
+                // Si el precio era negativo y avisamos al usuario
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                     content: Text('Error: El precio no puede ser negativo.'),
@@ -180,7 +180,7 @@ class _PantallaReservasState extends State<PantallaReservas> {
         ]
             : null,
       ),
-      // Lógica: Si no hay paquete, mostramos creación, si lo hay, mostramos gestión
+      // Si no hay paquete, mostramos creación, si lo hay, mostramos gestión
       body: paqueteRaiz == null ? _buildPantallaCreacion() : _buildPantallaGestion(),
     );
   }
